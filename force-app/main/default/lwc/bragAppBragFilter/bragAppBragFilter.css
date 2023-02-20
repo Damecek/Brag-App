@@ -1,0 +1,12 @@
+@media only screen and (min-width: 1025px) {
+    .wrapper {
+        position: fixed;
+    }
+}
+
+@media only screen and (max-width: 890px) {
+    .wrapper {
+        justify-content: space-between;
+        display: flex;
+    }
+}

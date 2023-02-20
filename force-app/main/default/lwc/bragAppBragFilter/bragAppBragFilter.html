@@ -1,0 +1,20 @@
+<template>
+    <div class="slds-card-wrapper wrapper slds-m-bottom_small">
+        <div class="slds-form-element">
+            <label class="slds-form-element__label slds-no-flex">
+                Business Impact
+            </label>
+            <div class="slds-form-element__control slds-grow">
+                <c-star-rating rating={businessImpact} onvalue={handleChange} name="businessImpact"></c-star-rating>
+            </div>
+        </div>
+        <div class="slds-form-element">
+            <label class="slds-form-element__label slds-no-flex">
+                Technical Complexity
+            </label>
+            <div class="slds-form-element__control slds-grow">
+                <c-star-rating rating={technicalComplexity} onvalue={handleChange} name="technicalComplexity"></c-star-rating>
+            </div>
+        </div>
+    </div>
+</template>

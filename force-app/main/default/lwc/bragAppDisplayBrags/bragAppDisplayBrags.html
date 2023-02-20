@@ -1,0 +1,32 @@
+<template>
+    <div>
+        <template for:each={brags} for:item="brag" lwc:if={bragsLength}>
+            <div key={brag.Id} class="slds-card-wrapper slds-m-bottom_medium">
+                <p class="slds-text-heading_large">
+                    {brag.Title__c}
+                </p>
+                <div class="slds-grid slds-grid_align-spread">
+                    <span>
+                        <span class="slds-text-color_inverse-weak">Business Impact: 
+                            <c-star-rating read-only rating={brag.Business_Impact__c}></c-star-rating>
+                        </span>
+                        <span class="slds-text-color_inverse-weak slds-p-horizontal_large">Technical Complexity:
+                            <c-star-rating read-only rating={brag.Technical_Complexity__c}></c-star-rating>
+                        </span>
+                    </span>
+                    {brag.dateCompleted}
+                </div>
+                <p class="slds-app-launcher__tile-body slds-text-body_regular">
+                    <lightning-formatted-rich-text value={brag.Body__c}></lightning-formatted-rich-text>
+                </p>
+            </div>
+        </template>
+        <template lwc:else>
+            <div class="slds-card-wrapper slds-m-bottom_medium">
+                <p class="slds-text-heading_large">
+                    No Brags Found
+                </p>
+            </div>
+        </template>
+    </div>
+</template>

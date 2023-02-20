@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#D6E46F</headerColor>
+        <logo>X46635736</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>true</isNavPersonalizationDisabled>
+    <label>Brag Application</label>
+    <navType>Standard</navType>
+    <tabs>Brag__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Brag_Application_UtilityBar</utilityBar>
+</CustomApplication>
