@@ -1,6 +1,4 @@
 import {LightningElement, api} from 'lwc'
-import FontAwesome from '@salesforce/resourceUrl/FontAwesome';
-import {loadStyle} from 'lightning/platformResourceLoader'
 
 export default class Star extends LightningElement {
     @api star
@@ -29,12 +27,5 @@ export default class Star extends LightningElement {
 
     get color() {
         return 'color:' + (this.star.isActive ? this.activeColor : this.inactiveColor) + ';'
-    }
-
-    renderedCallback() {
-        loadStyle(this, FontAwesome + '/css/all.css')
-            .catch(error => {
-                console.error(error.message)
-            })
     }
 }

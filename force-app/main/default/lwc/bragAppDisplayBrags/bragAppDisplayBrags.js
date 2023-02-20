@@ -2,8 +2,17 @@ import {LightningElement, wire} from 'lwc';
 import getBrags from '@salesforce/apex/BragAppDisplayBragsController.getBrags';
 import {APPLICATION_SCOPE, MessageContext, subscribe, unsubscribe,} from 'lightning/messageService';
 import bragAppChannel from '@salesforce/messageChannel/bragApp__c';
+import FontAwesome from '@salesforce/resourceUrl/FontAwesome';
+import {loadStyle} from 'lightning/platformResourceLoader'
 
 export default class BragAppDisplayBrags extends LightningElement {
+    renderedCallback() {
+        loadStyle(this, FontAwesome + '/css/all.css')
+            .catch(error => {
+                console.error(error.message)
+            })
+    }
+
     @wire(getBrags)
     wireBrags({error, data}) {
         if (data) {
@@ -25,7 +34,7 @@ export default class BragAppDisplayBrags extends LightningElement {
 
     /** @type {Brag__c[]} */
     _brags;
-    
+
     get isLoading() {
         return this._brags == null;
     }
