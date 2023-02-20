@@ -1,16 +1,17 @@
 <template>
-    <div>
+    <lightning-spinner lwc:if={isLoading}></lightning-spinner>
+    <template lwc:else>
         <template for:each={brags} for:item="brag" lwc:if={bragsLength}>
             <div key={brag.Id} class="slds-card-wrapper slds-m-bottom_medium">
                 <p class="slds-text-heading_large">
                     {brag.Title__c}
                 </p>
                 <div class="slds-grid slds-grid_align-spread">
-                    <span>
-                        <span class="slds-text-color_inverse-weak">Business Impact: 
+                    <span class="slds-grid slds-wrap">
+                        <span class="slds-text-color_inverse-weak slds-p-right_small">Business Impact:
                             <c-star-rating read-only rating={brag.Business_Impact__c}></c-star-rating>
                         </span>
-                        <span class="slds-text-color_inverse-weak slds-p-horizontal_large">Technical Complexity:
+                        <span class="slds-text-color_inverse-weak">Technical Complexity:
                             <c-star-rating read-only rating={brag.Technical_Complexity__c}></c-star-rating>
                         </span>
                     </span>
@@ -28,5 +29,5 @@
                 </p>
             </div>
         </template>
-    </div>
+    </template>
 </template>

@@ -25,6 +25,10 @@ export default class BragAppDisplayBrags extends LightningElement {
 
     /** @type {Brag__c[]} */
     _brags;
+    
+    get isLoading() {
+        return this._brags == null;
+    }
 
     get brags() {
         return this._brags?.filter(brag => {
