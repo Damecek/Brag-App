@@ -1,0 +1,66 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Check Password",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "sectionConfig" : "{\"UUID\":\"39759a7b-884e-4d4b-8132-6d7d3e75db4e\",\"columns\":[{\"UUID\":\"0c84ccfd-fabc-46a0-8d70-53b0938b6571\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : { },
+              "definition" : "community_login:communityLogo",
+              "id" : "4abe8305-c06d-4b05-97a6-4c9b15d74e5e",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "checkEmailMessage" : "Check the email account associated with your username for the link to reset your password. If you didn't get an email, check your Spam folder. Or contact your administrator.",
+                "returnButtonLabel" : "Back to login",
+                "titleLabel" : "Now check your email"
+              },
+              "definition" : "community_login:checkEmail",
+              "id" : "88d5a07b-d91c-4187-a541-1fae22bdd420",
+              "type" : "component"
+            } ],
+            "id" : "0c84ccfd-fabc-46a0-8d70-53b0938b6571",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "39759a7b-884e-4d4b-8132-6d7d3e75db4e",
+          "type" : "component"
+        } ],
+        "id" : "ed89f11b-cf4a-4a49-aa38-6008fe3cbcc0",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Check Password",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "5a16b4fd-abfc-45e4-b191-fa09aecd8a63",
+          "type" : "component"
+        } ],
+        "id" : "425d3cfc-ee8a-43b0-b1f1-9dec3dc9fc1f",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "24b68f3b-4952-47a6-88f2-98debfc8b015",
+      "type" : "component"
+    },
+    "themeLayoutType" : "Inner",
+    "viewType" : "check-password"
+  }
+}

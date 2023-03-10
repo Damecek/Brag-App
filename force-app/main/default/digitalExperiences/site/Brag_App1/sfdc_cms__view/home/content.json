@@ -1,0 +1,73 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Showcase of My Skills and Achievements | Salesforce Developer Org",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "sectionConfig" : "{\"UUID\":\"d05ee41e-74bf-458b-88ab-f53eca8336fc\",\"columns\":[{\"UUID\":\"decc321c-7238-42fe-8d9a-992fefcfe192\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"2\",\"seedComponents\":null},{\"UUID\":\"a3828b01-a5f2-42e4-a51c-59ef46831ad7\",\"columnName\":\"Column 2\",\"columnKey\":\"21d1f\",\"columnWidth\":\"8\",\"seedComponents\":[]},{\"UUID\":\"1ffe42be-bedb-44e1-87f4-63ca30989513\",\"columnName\":\"Column 3\",\"columnKey\":\"f645e\",\"columnWidth\":\"2\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : { },
+              "definition" : "c:bragAppBragFilter",
+              "id" : "890616e7-a852-4597-9f0c-8c36099996b9",
+              "type" : "component"
+            } ],
+            "id" : "decc321c-7238-42fe-8d9a-992fefcfe192",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          }, {
+            "children" : [ {
+              "attributes" : { },
+              "definition" : "c:bragAppDisplayBrags",
+              "id" : "4d8bc300-10cc-46a2-bcba-181c3677c0f1",
+              "type" : "component"
+            } ],
+            "id" : "a3828b01-a5f2-42e4-a51c-59ef46831ad7",
+            "name" : "21d1f",
+            "title" : "Column 2",
+            "type" : "region"
+          }, {
+            "id" : "1ffe42be-bedb-44e1-87f4-63ca30989513",
+            "name" : "f645e",
+            "title" : "Column 3",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "d05ee41e-74bf-458b-88ab-f53eca8336fc",
+          "type" : "component"
+        } ],
+        "id" : "27b08ddd-3af1-4a7e-9246-a6fdb284f5d5",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "<meta name=\"title\" property=\"og:title\" content=\"Showcase of My Skills and Achievements\">\n<meta name=\"description\" property=\"og:description\" content=\"This page showcases the achievements and skills of a Salesforce developer.\">\n<meta name=\"keywords\" content=\"Salesforce, developer, achievements, skills, CV, LWR, brag\">\n<meta name=\"author\" content=\"Adam Stepanek\">\n<meta name=\"robots\" content=\"index, follow\">\n<meta name=\"googlebot\" content=\"index, follow\">\n<meta property=\"og:type\" content=\"website\">\n<meta property=\"og:url\" content=\"https://brag-app-dev-ed.my.site.com/\">\n<meta property=\"og:image\" content=\"https://avatars.githubusercontent.com/u/46635736\">\n<meta property=\"twitter:card\" content=\"summary_large_image\">\n<meta property=\"twitter:url\" content=\"https://brag-app-dev-ed.my.site.com/\">\n<meta property=\"twitter:title\" content=\"Showcase of My Skills and Achievements\">\n<meta property=\"twitter:description\" content=\"This page showcases the achievements and skills of a Salesforce developer.\">\n<meta property=\"twitter:image\" content=\"https://avatars.githubusercontent.com/u/46635736\">",
+            "description" : "Explore my portfolio of achievements and skills in Salesforce. This personal project showcases my hands-on experience and is publicly available for viewing.",
+            "pageTitle" : "Showcase of My Skills and Achievements | Salesforce Developer Org",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "438fc610-2de9-4b12-90c5-2f86d658f632",
+          "type" : "component"
+        } ],
+        "id" : "6c8af841-444b-44b5-94c2-671a320ced52",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "25f44475-86e5-4acb-b278-32b85d3cf591",
+      "type" : "component"
+    },
+    "themeLayoutType" : "Inner",
+    "viewType" : "home"
+  }
+}

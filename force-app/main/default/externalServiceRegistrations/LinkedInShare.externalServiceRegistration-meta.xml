@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>LinkedInShare</label>
+    <namedCredentialReference>LinkedIn</namedCredentialReference>
+    <operations>
+        <active>true</active>
+        <name>me</name>
+    </operations>
+    <operations>
+        <active>true</active>
+        <name>share</name>
+    </operations>
+    <registrationProviderType>Custom</registrationProviderType>
+    <schema>{
+  &quot;openapi&quot;: &quot;3.0.0&quot;,
+  &quot;info&quot;: {
+    &quot;title&quot;: &quot;LinkedIn API&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;
+  },
+  &quot;servers&quot;: [{
+    &quot;url&quot;: &quot;https://api.linkedin.com&quot;
+  }],
+  &quot;paths&quot;: {
+    &quot;/v2/ugcPosts&quot;: {
+      &quot;post&quot;: {
+        &quot;operationId&quot;: &quot;share&quot;,
+        &quot;summary&quot;: &quot;Create a Share on LinkedIn&quot;,
+        &quot;requestBody&quot;: {
+          &quot;description&quot;: &quot;Request Body Schema&quot;,
+          &quot;content&quot;: {
+            &quot;application/json&quot;: {
+              &quot;schema&quot;: {
+                &quot;$ref&quot;: &quot;#/components/schemas/ShareRequestBody&quot;
+              }
+            }
+          }
+        },
+        &quot;responses&quot;: {
+          &quot;201&quot;: {
+            &quot;description&quot;: &quot;Successful operation&quot;,
+            &quot;content&quot;: {
+              &quot;application/json&quot;: {
+                &quot;schema&quot;: {
+                  &quot;$ref&quot;: &quot;#/components/schemas/IdResponse&quot;
+                }
+              }
+            }
+          },
+          &quot;400&quot;: {
+            &quot;description&quot;: &quot;Invalid input parameters&quot;
+          },
+          &quot;401&quot;: {
+            &quot;description&quot;: &quot;Unauthorized&quot;
+          },
+          &quot;403&quot;: {
+            &quot;description&quot;: &quot;Forbidden&quot;
+          },
+          &quot;500&quot;: {
+            &quot;description&quot;: &quot;Internal Server Error&quot;
+          }
+        }
+      }
+    },
+    &quot;/v2/me&quot;: {
+      &quot;get&quot;: {
+        &quot;operationId&quot;: &quot;me&quot;,
+        &quot;summary&quot;: &quot;Gets information about currently login user&quot;,
+        &quot;responses&quot;: {
+          &quot;200&quot;: {
+            &quot;description&quot;: &quot;Successful operation&quot;,
+            &quot;content&quot;: {
+              &quot;application/json&quot;: {
+                &quot;schema&quot;: {
+                  &quot;$ref&quot;: &quot;#/components/schemas/Me&quot;
+                }
+              }
+            }
+          },
+          &quot;400&quot;: {
+            &quot;description&quot;: &quot;Invalid input parameters&quot;
+          },
+          &quot;401&quot;: {
+            &quot;description&quot;: &quot;Unauthorized&quot;
+          },
+          &quot;403&quot;: {
+            &quot;description&quot;: &quot;Forbidden&quot;
+          },
+          &quot;500&quot;: {
+            &quot;description&quot;: &quot;Internal Server Error&quot;
+          }
+        }
+      }
+    }
+  },
+  &quot;components&quot;: {
+    &quot;schemas&quot;: {
+      &quot;IdResponse&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;id&quot;: {
+            &quot;type&quot;: &quot;string&quot;
+          }
+        }
+      },
+      &quot;Me&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;localizedLastName&quot;: {
+            &quot;type&quot;: &quot;string&quot;
+          },
+          &quot;profilePicture&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+              &quot;displayImage&quot;: {
+                &quot;type&quot;: &quot;string&quot;
+              }
+            }
+          },
+          &quot;firstName&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+              &quot;localized&quot;: {
+                &quot;type&quot;: &quot;object&quot;,
+                &quot;properties&quot;: {
+                  &quot;en_US&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                  }
+                }
+              },
+              &quot;preferredLocale&quot;: {
+                &quot;type&quot;: &quot;object&quot;,
+                &quot;properties&quot;: {
+                  &quot;country&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                  },
+                  &quot;language&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                  }
+                }
+              }
+            }
+          },
+          &quot;lastName&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+              &quot;localized&quot;: {
+                &quot;type&quot;: &quot;object&quot;,
+                &quot;properties&quot;: {
+                  &quot;en_US&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                  }
+                }
+              },
+              &quot;preferredLocale&quot;: {
+                &quot;type&quot;: &quot;object&quot;,
+                &quot;properties&quot;: {
+                  &quot;country&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                  },
+                  &quot;language&quot;: {
+                    &quot;type&quot;: &quot;string&quot;
+                  }
+                }
+              }
+            }
+          },
+          &quot;id&quot;: {
+            &quot;type&quot;: &quot;string&quot;
+          },
+          &quot;localizedFirstName&quot;: {
+            &quot;type&quot;: &quot;string&quot;
+          }
+        }
+      },
+      &quot;ShareRequestBody&quot;: {
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+          &quot;author&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;The Person URN of the Member creating the share.&quot;
+          },
+          &quot;lifecycleState&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;Defines the state of the share. For the purposes of creating a share, the lifecycleState will always be PUBLISHED.&quot;
+          },
+          &quot;specificContent&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+              &quot;com.linkedin.ugc.ShareContent&quot;: {
+                &quot;type&quot;: &quot;object&quot;,
+                &quot;properties&quot;: {
+                  &quot;shareCommentary&quot;: {
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;description&quot;: &quot;Provides the primary content for the share.&quot;,
+                    &quot;properties&quot;: {
+                      &quot;text&quot;: {
+                        &quot;type&quot;: &quot;string&quot;
+                      }
+                    }
+                  },
+                  &quot;shareMediaCategory&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;description&quot;: &quot;Represents the media assets attached to the share. Possible values include: NONE - The share does not contain any media, and will only consist of text. ARTICLE - The share contains a URL. IMAGE - The Share contains an image.&quot;,
+                    &quot;enum&quot;: [
+                      &quot;NONE&quot;,
+                      &quot;ARTICLE&quot;,
+                      &quot;IMAGE&quot;
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          &quot;visibility&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+              &quot;com.linkedin.ugc.MemberNetworkVisibility&quot;: {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;description&quot;: &quot;Defines any visibility restrictions for the share. Possible values include: PUBLIC.&quot;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}</schema>
+    <schemaType>OpenApi3</schemaType>
+    <schemaUploadFileExtension>json</schemaUploadFileExtension>
+    <schemaUploadFileName>openapi (9)</schemaUploadFileName>
+    <serviceBinding>{&quot;compatibleMediaTypes&quot;:{}}</serviceBinding>
+    <status>Incomplete</status>
+    <systemVersion>4</systemVersion>
+</ExternalServiceRegistration>

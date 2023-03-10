@@ -1,0 +1,142 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Default Header and Footer",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "allowVisitorClose" : false,
+            "assistiveText" : "",
+            "buttonVerticalAlignment" : "Top",
+            "closeStyle" : "X Icon - Dark",
+            "mobileMaxHeight" : 10
+          },
+          "children" : [ {
+            "id" : "469fea54-927d-4e0b-8914-c29751e59806",
+            "name" : "content",
+            "title" : "content",
+            "type" : "region"
+          } ],
+          "definition" : "dxp_page_layout:sectionTopSetting",
+          "id" : "86d8511b-f8ab-4003-b4ed-446d593d2edf",
+          "type" : "component"
+        } ],
+        "id" : "092d5b71-1aa6-426c-a7ed-a3084ece1184",
+        "name" : "stickyHeader",
+        "title" : "Theme Fixed Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundColor" : "",
+            "paddingHorizontal" : "none",
+            "paddingVertical" : "none",
+            "text" : "Welcome to my Brag Application",
+            "textAlign" : "center",
+            "textDecoration" : "{}",
+            "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\"}"
+          },
+          "definition" : "dxp_base:textBlock",
+          "id" : "908e5b92-f448-40bc-82f4-450d6666a45b",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "backgroundColor" : "",
+            "paddingHorizontal" : "none",
+            "paddingVertical" : "none",
+            "text" : "This site shows my personal achievements on the Salesforce platform. Feel free to contact me.",
+            "textAlign" : "center",
+            "textDecoration" : "{}",
+            "textDisplayInfo" : "{\"textStyle\":\"body-regular\",\"headingTag\":\"p\"}"
+          },
+          "definition" : "dxp_base:textBlock",
+          "id" : "5705fbd2-2957-45bd-90bd-e2ad80213a41",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "richTextValue" : "<p style=\"text-align: center;\"><a href=\"https://www.linkedin.com/in/adam-stepanek-cz/\" rel=\"noopener noreferrer\" target=\"_blank\">LinkedIn</a></p><p style=\"text-align: center;\"><a href=\"https://github.com/Damecek\" rel=\"noopener noreferrer\" target=\"_blank\">GitHub</a></p>"
+          },
+          "definition" : "community_builder:richTextEditor",
+          "id" : "c5ff5b49-10a8-4434-8b3a-7dc0054c878e",
+          "type" : "component"
+        } ],
+        "id" : "2096806a-2b0d-4b57-9996-bf40d5f9c816",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "sectionConfig" : "{\"UUID\":\"f1cb20e6-2392-42b4-957c-2a0bb3785ee0\",\"columns\":[{\"UUID\":\"6a64c002-7872-4a05-80a9-05f06a201399\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 11px;\">This website is a personal project created solely for the purpose of showcasing my skills and Salesforce capabilities. It is not a commercial product or service and is not affiliated with any organization or company.</span></p><p style=\"text-align: center;\"><span style=\"font-size: 11px;\">The information and content provided on this website are for educational and demonstrative purposes only.</span></p>"
+              },
+              "definition" : "community_builder:richTextEditor",
+              "id" : "34252c9e-261e-40b4-ae73-8b6c22dadc66",
+              "type" : "component"
+            } ],
+            "id" : "6a64c002-7872-4a05-80a9-05f06a201399",
+            "name" : "footerSection",
+            "title" : "Theme Footer",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "f1cb20e6-2392-42b4-957c-2a0bb3785ee0",
+          "type" : "component"
+        } ],
+        "id" : "640aa8d8-ab2a-4a2f-a602-f2a9c545ae9b",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "allowVisitorClose" : false,
+            "assistiveText" : "",
+            "closeStyle" : "X Icon - Dark",
+            "hideWhenFooterInViewport" : false,
+            "mobileMaxHeight" : 10
+          },
+          "children" : [ {
+            "id" : "49ba81ee-7d6c-4824-961d-65cf52bdeb27",
+            "name" : "content",
+            "title" : "content",
+            "type" : "region"
+          } ],
+          "definition" : "dxp_page_layout:sectionBottomSetting",
+          "id" : "492d9aa2-ada7-406b-abb3-0ff0345a1785",
+          "type" : "component"
+        } ],
+        "id" : "cd511a7c-32fe-4382-9053-24b3783fff1f",
+        "name" : "stickyFooter",
+        "title" : "Theme Fixed Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : { },
+          "definition" : "dxp_page_layout:placeHolder",
+          "id" : "0a0c51ea-06d5-4030-9925-3a018a506f38",
+          "type" : "component"
+        } ],
+        "id" : "544af48b-812f-4570-a472-15e975773253",
+        "name" : "placeHolder",
+        "title" : "Place Holder",
+        "type" : "region"
+      }, {
+        "id" : "6a0d0ca9-a787-4e06-82b9-7893db05082b",
+        "name" : "default",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:simpleThemeLayout",
+      "id" : "13ad6160-cdca-4778-8389-8bf132e38f48",
+      "type" : "component"
+    }
+  }
+}

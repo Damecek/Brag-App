@@ -1,0 +1,26 @@
+{
+  "type" : "sfdc_cms__mobilePublisherConfig",
+  "title" : "sites.core.NativeConfig",
+  "contentBody" : {
+    "nativeMobileNavConfig" : {
+      "ios" : {
+        "showBackButton" : true,
+        "showHamburgerMenuWithBackButton" : false
+      },
+      "global" : {
+        "showHamburgerMenu" : true
+      }
+    },
+    "nativeTabMenu" : {
+      "branding" : {
+        "inheritsFromSiteBranding" : true,
+        "iconTintColor" : "#232564",
+        "iconTintColorUnselected" : "#C9C5C5",
+        "barTintColor" : "#FFFFFF",
+        "textColor" : "#232564",
+        "textColorUnselected" : "#C9C5C5"
+      },
+      "menuItems" : [ ]
+    }
+  }
+}
